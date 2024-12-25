@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'SFDistantGalaxy';
+    src: url('assets/fonts/distant_galaxy/SFDistantGalaxy.ttf');
+}
+@font-face {
+    font-family: 'BattleStar' ;
+    src: url('assets\fonts\battle-star-font\BattleStar-K7dl7.ttf');
+}
+
+body{
+    background-color: #212121;
+    color:indianred;
+}
+.distantgalaxy{
+    font-family: 'SFDistantGalaxy';
+}
+.battlestar{
+    font-family: 'BattleStar';
+}
