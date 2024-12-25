@@ -9,6 +9,10 @@
     font-family: 'BattleStar' ;
     src: url('assets\fonts\battle-star-font\BattleStar-K7dl7.ttf');
 }
+@font-face {
+    font-family: 'rebellion' ;
+    src: url('assets\fonts\rebellion-font\Rebellion-oPoA.ttf');
+}
 
 body{
     background-color: #212121;
@@ -19,4 +23,10 @@ body{
 }
 .battlestar{
     font-family: 'BattleStar';
+}
+.rebellion{
+    font-family: 'rebellion';
+}
+.poppins{
+    font-family: 'Poppins';
 }
