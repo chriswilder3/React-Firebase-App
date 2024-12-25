@@ -3,7 +3,7 @@ import React from 'react'
 function PostCard({title,preview, date  }) {
   return (
     
-    <div className=' mt-14 bg-slate-300 '>
+    <div className=' mt-14  '>
       {/* <h1 className='text-2xl ml-20 poppins text-center text-rose-400 my-3 '>
           Recent Posts
       </h1>    */}
@@ -29,11 +29,12 @@ function PostCard({title,preview, date  }) {
             </div>
         </div> */}
 
-        <div className=' flex bg-slate-800 p-6 mx-auto flex-col justify-center'>
+        <div className=' flex flex-col bg-gray-100 p-6  justify-center rounded-md'>
            
            
-           <div className=' flex flex-col justify-center p-2'>
-                {date}
+           <div className=' flex flex-col justify-center p-2 '>
+            <span> {date} </span>
+                
               <h2 className='text-3xl poppins font-bold text-red-400'>
                  {title}
                 </h2>

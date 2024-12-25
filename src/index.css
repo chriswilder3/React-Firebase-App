@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
     font-family: 'SFDistantGalaxy';
     src: url('assets/fonts/distant_galaxy/SFDistantGalaxy.ttf');
@@ -24,13 +25,6 @@
     src: url('assets/fonts/boba-fonts_tie-wing/TIE-Wing.ttf');
   }
   
-  
-  body {
-    
-    background-attachment: fixed;
-    color: #f4f4f9;
-    margin: 0;
-  }
 
   .indianred{
     background: #000428;
@@ -76,3 +70,6 @@
     text-shadow: 2px 2px 2px black;
   }
 
+  #root{
+    background-color: #d5cfb6;
+  }
