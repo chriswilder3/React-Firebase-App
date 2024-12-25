@@ -7,7 +7,7 @@ function Hero() {
             Sachin's Blogs
         </h1>
         
-        <h2 className="battlestar text-3xl font-thin text-blue-500 text-center">
+        <h2 className="tiefighter text-3xl font-medium textshadow text-blue-400 text-center">
             <span> 
               Made with React, Firebase, and Lightsabers 
             </span>

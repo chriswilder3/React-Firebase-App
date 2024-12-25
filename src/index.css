@@ -19,7 +19,12 @@
     font-family: 'deathstar';
     src: url('assets/fonts/death-star-font/DeathStar-VmWB.ttf');
   }
-
+  @font-face {
+    font-family: 'tiefighter';
+    src: url('assets/fonts/boba-fonts_tie-wing/TIE-Wing.ttf');
+  }
+  
+  
   body {
     
     background-attachment: fixed;
@@ -52,6 +57,12 @@
   .deathstar{
     font-family: 'deathstar';
   }
+  .tiefighter{
+    font-family: 'tiefighter';
+  }
+  .fira-mono{
+    font-family: 'Fira Mono';
+  }
   
   a {
     text-decoration: none;
@@ -61,3 +72,7 @@
     cursor: pointer;
   }
   
+  .textshadow{
+    text-shadow: 2px 2px 2px black;
+  }
+
