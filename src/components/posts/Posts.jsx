@@ -1,6 +1,9 @@
 import React from 'react'
-import Blog from './Blog'
+import PostCard from './PostCard'
 function Posts() {
+  
+  const postlink = 'oolala'
+
   return (
     
     <div className=' mt-14 '>
@@ -8,8 +11,8 @@ function Posts() {
           Recent Posts
       </h1>    */}
       
-      <Blog title='Best Star wars movies' content=' Never mind' date={ `${new Date( Date.now()).toLocaleDateString()}`} />
-      <Blog title='Best Star wars movies' content=' Never mind' date={ `${new Date( Date.now()).toLocaleDateString()}`} />
+      <PostCard title='Best Star wars movies' preview=' Never mind' date={ `${new Date( Date.now()).toLocaleDateString()}`} bloglink={postlink} />
+      <PostCard title='Best Star wars movies' preview=' Never mind' date={ `${new Date( Date.now()).toLocaleDateString()}`} bloglink={postlink} />
       
     </div>
   )

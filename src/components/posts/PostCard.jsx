@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Blog({title,content, date  }) {
+function PostCard({title,preview, date  }) {
   return (
     
-    <div className=' mt-14 '>
+    <div className=' mt-14 bg-slate-300 '>
       {/* <h1 className='text-2xl ml-20 poppins text-center text-rose-400 my-3 '>
           Recent Posts
       </h1>    */}
@@ -29,7 +29,7 @@ function Blog({title,content, date  }) {
             </div>
         </div> */}
 
-<div className=' w-2/3 flex bg-slate-800 p-6 mx-auto flex-col justify-center'>
+        <div className=' flex bg-slate-800 p-6 mx-auto flex-col justify-center'>
            
            
            <div className=' flex flex-col justify-center p-2'>
@@ -38,7 +38,7 @@ function Blog({title,content, date  }) {
                  {title}
                 </h2>
               <p className=' my-2 poppins  text-slate-300 font-serif'> 
-                {content}
+                {preview}
               </p>
                 
             </div>
@@ -51,4 +51,4 @@ function Blog({title,content, date  }) {
   )
 }
 
-export default Blog
+export default PostCard
