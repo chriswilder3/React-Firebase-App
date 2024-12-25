@@ -28,7 +28,7 @@
   }
 
   .indianred{
-    background:linear-gradient(to right, #000428 25%,#000428 26%, #a8a9ad 27% , #a8a9ad 32%, skyblue 33% , skyblue);
+    background: #000428;
     box-shadow: 0 0 15px lightblue,inset 0 0 15px lightblue;
   }
   

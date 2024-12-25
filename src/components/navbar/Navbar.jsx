@@ -2,8 +2,8 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className="relative ">
-      <ul className="mx-auto p-4 rounded-full items-center indianred md:flex gap-10 poppins font-semibold text-lg text-white shadow-md">
+    <div className=" ">
+      <ul className=" fixed z-10 w-1/2 py-6 px-8 rounded-full  indianred md:flex gap-10 poppins font-semibold text-lg text-white shadow-md">
         <li>
           <a href="#" className="hover:text-yellow-400 transition-colors">Home</a>
         </li>
