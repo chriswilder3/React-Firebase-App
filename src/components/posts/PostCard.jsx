@@ -32,7 +32,7 @@ function PostCard({id, title,preview, date  }) {
 
         <div className=' flex flex-col bg-gray-100 p-6  justify-center rounded-md'>
            
-           <Link to={`/posts/blog/:${id}`}>
+           <Link to={`/posts/blog/${id}`}>
             <div className=' flex flex-col justify-center p-2 '>
               <span> {date}  </span>
               <span> {id}</span>

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './components/home/Home';
 import PostCreate from './components/posts/PostCreate';
-
+import Blog from './components/posts/Blog';
 function App() {
  
 
@@ -18,7 +18,7 @@ function App() {
              < Route index element={ <Home />} />
              < Route path='posts' element={ <Posts /> } />
              < Route path='posts/create' element={ <PostCreate /> } />
-             < Route path='posts/blog/:id' element={ <Blog /> } />
+             < Route path='posts/blog/:blog_id' element={ <Blog /> } />
           </Route>
         </Routes>
       </Router>

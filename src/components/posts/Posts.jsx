@@ -18,7 +18,7 @@ function Posts() {
       id: doc.id,
       ...doc.data()
     }))
-    console.log(PostsArray, typeof PostsArray);
+    // console.log(PostsArray, typeof PostsArray);
 
     setPosts(PostsArray)
 
