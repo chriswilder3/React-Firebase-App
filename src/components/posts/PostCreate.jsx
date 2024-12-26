@@ -1,19 +1,31 @@
 import React from 'react'
 import { collection, addDoc} from 'firebase/firestore'
-import {db} from 'src/firebase.js'
+import {db} from '../../firebase.js'
+
 
 function PostCreate() {
-    const handleCreatePost = (e) =>{
-        e.preventDefault()
-        const title = document.getElementById('title').value
-        const content = document.getElementById('content').value
+    const handleCreatePost = async (e) => {
+         e.preventDefault(); 
+         const title = document.getElementById('title').value; 
+         const content = document.getElementById('content').value; 
+         console.log('title: ', title); console.log('content: ', content); 
+         try { 
+            await addDoc(collection(db, 'users'),
+                    { 
+                    title: title, 
+                    content: content, 
+                }
+             ); 
+             console.log('Document successfully written!'); 
+             alert('created the blog successfully ');
+             window.open("/posts")
+            }
+        catch (error) { 
+            console.error('Error writing document: ', error); 
+            alert(`Error writing document : ${error} `);
 
-        console.log('title : ', title);
-        console.log('content : ', content);
-
-        
-
-    }
+        }
+    };
 
   return (
     <div className='mt-16 '>

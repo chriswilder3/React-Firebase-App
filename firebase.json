@@ -5,7 +5,6 @@
       "host": "localhost",
       "app": {
         "startCommand": "vite preview --port 5000"
-        }
       }
     },
     "auth": {
@@ -20,9 +19,6 @@
     "database": {
       "port": 9000
     },
-    "hosting": {
-      "port": 5000
-    },
     "storage": {
       "port": 9199
     },
@@ -31,5 +27,5 @@
       "port": 3000
     },
     "singleProjectMode": true
-  
+  }
 }

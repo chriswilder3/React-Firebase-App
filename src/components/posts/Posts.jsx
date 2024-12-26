@@ -1,9 +1,34 @@
 import React from 'react'
 import PostCard from './PostCard'
 import { Link } from 'react-router-dom'
+import {db} from '../../firebase.js'
+import { getDocs, collection } from 'firebase/firestore'
+import { useState } from 'react'
+import { useEffect } from 'react'
+
+
 function Posts() {
   
-  const postlink = 'oolala'
+  const [posts, setPosts] = useState([])
+
+  async function getAllBlogs() {
+    const querySnapshot = await getDocs(collection(db,"users"))
+
+    const PostsArray = querySnapshot.docs.map( (doc) => {
+      return doc.data()
+    })
+    console.log(PostsArray, typeof PostsArray);
+
+    setPosts(PostsArray)
+
+    // console.log('posts : '  , posts);
+  }
+  useEffect( ()=> {
+    getAllBlogs();
+    
+  }, [])
+
+
 
   return (
     
@@ -14,9 +39,22 @@ function Posts() {
         Create
       </Link>
       </h1>    
+
+
+      { 
+        // Render the Postcard only there are posts obtained
+        // from DB.
+
+          posts.length > 0 &&
+          posts.map(post => {
+            const blogData = post
+            return <PostCard title={blogData.title} preview={blogData.content} date={'Now'} bloglink={'ok'} />
+          })
+        
+      }
       
-      <PostCard title='Best Star wars movies' preview=' Never mind' date={ `${new Date( Date.now()).toLocaleDateString()}`} bloglink={postlink} />
-      <PostCard title='Best Star wars movies' preview=' Never mind' date={ `${new Date( Date.now()).toLocaleDateString()}`} bloglink={postlink} />
+      {/* <PostCard title={title} preview=' Never mind' date={content} bloglink={postlink} /> */}
+      
       
     </div>
   )
