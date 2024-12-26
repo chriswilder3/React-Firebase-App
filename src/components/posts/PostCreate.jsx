@@ -8,12 +8,16 @@ function PostCreate() {
          e.preventDefault(); 
          const title = document.getElementById('title').value; 
          const content = document.getElementById('content').value; 
+         const date = new Date(Date.now());
+         const formattedDate = date.toLocaleString('en-GB', { hour12: false }).replace(',', '').slice(0, 16);
+
          console.log('title: ', title); console.log('content: ', content); 
          try { 
             await addDoc(collection(db, 'users'),
                     { 
                     title: title, 
                     content: content, 
+                    date : formattedDate
                 }
              ); 
              console.log('Document successfully written!'); 

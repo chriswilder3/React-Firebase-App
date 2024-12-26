@@ -49,7 +49,7 @@ function Posts() {
           posts.length > 0 &&
           posts.map(post => {
             const blogData = post
-            return <PostCard key={blogData.id} id={blogData.id} title={blogData.title} preview={blogData.content} date={'Now'} />
+            return <PostCard key={blogData.id} id={blogData.id} title={blogData.title} preview={blogData.content} date={blogData.date} />
           })
         
       }
