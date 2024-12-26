@@ -18,6 +18,7 @@ function App() {
              < Route index element={ <Home />} />
              < Route path='posts' element={ <Posts /> } />
              < Route path='posts/create' element={ <PostCreate /> } />
+             < Route path='posts/blog/:id' element={ <Blog /> } />
           </Route>
         </Routes>
       </Router>

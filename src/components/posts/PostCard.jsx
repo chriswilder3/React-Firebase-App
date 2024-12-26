@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-function PostCard({title,preview, date  }) {
+function PostCard({id, title,preview, date  }) {
   return (
     
     <div className=' mt-14  '>
@@ -31,18 +32,20 @@ function PostCard({title,preview, date  }) {
 
         <div className=' flex flex-col bg-gray-100 p-6  justify-center rounded-md'>
            
-           
-           <div className=' flex flex-col justify-center p-2 '>
-            <span> {date} </span>
-                
-              <h2 className='text-3xl poppins font-bold text-red-400'>
-                 {title}
-                </h2>
-              <p className=' my-2 poppins  text-slate-300 font-serif'> 
-                {preview}
-              </p>
-                
-            </div>
+           <Link to={`/posts/blog/:${id}`}>
+            <div className=' flex flex-col justify-center p-2 '>
+              <span> {date}  </span>
+              <span> {id}</span>
+                  
+                <h2 className='text-3xl poppins font-bold text-red-400'>
+                  {title}
+                  </h2>
+                <p className=' my-2 poppins  text-slate-300 font-serif'> 
+                  {preview}
+                </p>
+                  
+              </div>
+            </Link>
         </div>
 
      

@@ -14,9 +14,10 @@ function Posts() {
   async function getAllBlogs() {
     const querySnapshot = await getDocs(collection(db,"users"))
 
-    const PostsArray = querySnapshot.docs.map( (doc) => {
-      return doc.data()
-    })
+    const PostsArray = querySnapshot.docs.map( (doc) => ({
+      id: doc.id,
+      ...doc.data()
+    }))
     console.log(PostsArray, typeof PostsArray);
 
     setPosts(PostsArray)
@@ -48,12 +49,11 @@ function Posts() {
           posts.length > 0 &&
           posts.map(post => {
             const blogData = post
-            return <PostCard title={blogData.title} preview={blogData.content} date={'Now'} bloglink={'ok'} />
+            return <PostCard key={blogData.id} id={blogData.id} title={blogData.title} preview={blogData.content} date={'Now'} />
           })
         
       }
       
-      {/* <PostCard title={title} preview=' Never mind' date={content} bloglink={postlink} /> */}
       
       
     </div>
